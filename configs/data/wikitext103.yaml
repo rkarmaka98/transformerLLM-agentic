@@ -1,0 +1,3 @@
+path: data/processed/wikitext103
+block_size: 1024
+num_workers: 4

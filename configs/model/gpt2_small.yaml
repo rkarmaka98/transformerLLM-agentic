@@ -1,0 +1,9 @@
+name: gpt2-small
+vocab_size: 50257
+ctx_len: 1024
+n_layer: 12
+n_head: 12
+d_model: 768
+d_mlp: 3072
+dropout: 0.1
+rope: false

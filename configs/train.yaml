@@ -1,0 +1,23 @@
+defaults:
+  - model: gpt2_small
+  - data: wikitext103
+  - optim: adamw
+
+seed: 1337
+trainer:
+  max_steps: 200_000
+  batch_size: 16
+  grad_accum: 4
+  compile: true
+  amp: true
+  grad_ckpt: true
+  log_every: 50
+  eval_every: 1000
+  save_every: 5000
+  work_dir: ./runs/${now:%Y%m%d}_${now:%H%M}_${model.name}
+
+wandb:
+  enable: true
+  project: "trasformer-scratch"
+  entity: null
+  mode: "offline"   # "offline" or "disabled"
